@@ -1,0 +1,150 @@
+.widget-container {
+    width: fit-content;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+
+    &:hover .btn-container {
+        opacity: 1;
+    }
+
+    .inhale-exhale-txt {
+        font-size: 10px;
+        color: #55534f;
+        visibility: hidden;
+        margin-bottom: -4px !important;
+
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fadeInAnimation 1s ease-in forwards;
+    }
+
+    .flower-container {
+        /* width: 170px;
+        height: 95px; */
+        width: 180px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        z-index: -50;
+
+
+        .background {
+            width: 100%;
+            height: 100%;
+            background-color: #bfd8c9;
+            position: absolute;
+            top: 0;
+            z-index: -99;
+        }
+
+        .semicircle {
+            background-color: #458260;
+            position: absolute;
+            z-index: -89;
+            height: 0px;
+            width: 0px;
+            border-radius: 100px 100px 0 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+    }
+
+    .btn-container {
+        opacity: 0;
+        transition: all ease-in-out .8s;
+        position: absolute;
+        bottom: 0;
+        z-index: 50;
+        transition: all 1s ease;
+
+        .start-btn {
+            border-radius: 30px;
+            border: none;
+            color: white;
+            background-color:#458260;
+            font-family: Helvetica, Arial sans-serif;
+            font-size: 13px;
+            padding: 1px 9px;
+            padding-bottom: 0 !important;
+            position: absolute;
+        }
+
+        .stop-btn {
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            background-color: #458260;
+            font-size: 12px;
+            margin: 0 !important;
+            position: absolute;
+        }
+    }
+
+    .counter-txt {
+        font-size: 10px;
+        font-family: Helvetica, Arial sans-serif;
+        opacity: 0;
+        transition: all 1.5s ease-in;
+        color: #55534f;
+    }
+
+    .reminder {
+        position: absolute;
+        top: 1%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.823);
+        padding: 30px 50px;
+        animation: reminderShow 600s infinite; /* Repeat infinitely */
+        transition: all .5s ease;
+        border-radius: 100%;
+
+
+        p {
+            font-size: 8px;
+            text-align: center;
+            color:#55534f;
+            margin: 0;
+        }
+    }
+
+}
+
+// ANIMATIONS
+
+@keyframes reminderShow {
+    0% {
+        opacity: 0;
+    }
+    0.5% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
